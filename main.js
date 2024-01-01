@@ -16,13 +16,20 @@ form.addEventListener('submit', async (e) => {
         prompt: data.get('prompt'),
       }),
     });
+});
 
+    if(response.ok){ // if the response is successful (200 code), show the image
     const { image } = await response.json();
 
     const result = document.querySelector('#result');
     result.innerHTML = `<img src="${image}" width="512" />`;
     hideSpinner();
-});
+    }
+    else { // if the response is unsuccessful, show the error to the end user
+      const err = await response.text();
+      alert(err);
+      console.error(err);
+    }
 
 function showSpinner(){
   const button = document.querySelector('button');
