@@ -1,8 +1,8 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-import OpenAI from 'openai';
-const openai = new OpenAI({
+import OpenAI from 'openai'; // updated import to reflect new package name (openai-api -> openai) in 4.0.0
+const openai = new OpenAI({ 
     apiKey: process.env.OPENAI,
 });
 
