@@ -1,13 +1,13 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
+import * as dotenv from 'dotenv'; // updated import to reflect new package name (dotenv -> dotenv) in 10.0.0
+dotenv.config(); // updated to reflect new package name (dotenv -> dotenv) in 10.0.0
 
 import OpenAI from 'openai'; // updated import to reflect new package name (openai-api -> openai) in 4.0.0
-const openai = new OpenAI({ 
-    apiKey: process.env.OPENAI,
-});
+const openai = new OpenAI({  // creates the var 'openai' from OpenAI pkg
+    apiKey: process.env.OPENAI, // sets the api key to the environment variable
+}); 
 
-import express from 'express';
-import cors from 'cors';
+import express from 'express'; // updated import to reflect new package name (express -> express) in 4.0.0
+import cors from 'cors'; // updated import to reflect new package name (cors -> cors) in 2.8.5
 
 const app = express();
 app.use(cors());
