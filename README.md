@@ -1,6 +1,6 @@
 # AI-Photo-Generator
 
-AI-Photo-Generator is a JavaScript application that leverages OpenAI's API to create a simple text-to-image generator. With this app, you can easily generate images based on text input, allowing you to bring your ideas to life visually. 😄📷
+AI-Photo-Generator is a Vanilla JavaScript application that leverages OpenAI's API to create a simple text-to-image generator. With this app, you can easily generate images based on text input, allowing you to bring your ideas to life visually. 😄📷
 
 ## Features
 - Text-to-image conversion: Enter any text and instantly generate an image representation. 🖋️
