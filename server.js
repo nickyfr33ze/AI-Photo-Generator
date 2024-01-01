@@ -1,11 +1,10 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
 
-const { Configuration, OpenAIApi } = pkg;
-import pkg from 'openai-api';
-
-const configuration = new Configuration({ apiKey: process.env.OPENAI });
-const openai = new OpenAIApi(configuration);
+import OpenAI from 'openai';
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI,
+});
 
 import express from 'express';
 import cors from 'cors';
@@ -26,4 +25,4 @@ app.post('/dream', async (req, res) => {
     res.send({ image });
 });
 
-app.listen(8080, () => console.log('Server running on https://localhost:8080/dream'));
+app.listen(8080, () => console.log('Server running on https://127.0.0.1:8080/dream'));
