@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.post('/dream', async (req, res) => {
     const prompt = req.body.prompt;
-    const aiResponse = await openai.createImage({
+    const aiResponse = await openai.images.generate({ // changed from 'openai.createImage'
         prompt,
         n: 1,
         size: '1024x1024',
@@ -25,4 +25,4 @@ app.post('/dream', async (req, res) => {
     res.send({ image });
 });
 
-app.listen(8080, () => console.log('Server running on https://127.0.0.1:8080/dream'));
+app.listen(8080, () => console.log('Server running on https://localhost:8080/dream'));
